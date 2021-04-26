@@ -12,9 +12,10 @@ class Alive{
 
 class Marry{
 
-    constructor(name, age) {
+    constructor(name, age, color= 'black') {
         this.name = name
         this.age = age
+        this.color = color
     }
 }
 
@@ -23,7 +24,5 @@ Array.prototype.changeName = function (){
 };
 
 let humanMale = new Alive('Jhon', 20)
-let humanFemale = new Alive('Marry', 21)
-
-console.log(humanMale.action.call(humanFemale))
-
+let humanFemale = new Marry('Marry', 21, 'white')
+console.log(humanFemale)
