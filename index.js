@@ -18,12 +18,13 @@ class Marry{
     }
 }
 
-Array.prototype.changeName = function (){
+Alive.prototype.changeName = function (){
     return `changed ${this.name} `
 };
 
 let humanMale = new Alive('Jhon', 20)
 let humanFemale = new Alive('Marry', 21)
 
-// console.log(humanMale.action.call(humanFemale))
+console.log(humanMale.action.call(humanFemale))
+humanMale.changeName()
 
