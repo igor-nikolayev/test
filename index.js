@@ -12,7 +12,7 @@ class Alive{
 
 class Marry{
 
-    constructor(name, age, color= 'black') {
+    constructor(name, age, color= '') {
         this.name = name
         this.age = age
         this.color = color
