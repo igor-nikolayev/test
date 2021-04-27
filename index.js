@@ -1,4 +1,4 @@
-class Alive{
+class Alive {
     /**
      *
      * @param name
@@ -18,7 +18,7 @@ class Alive{
     }
 }
 
-class Marry{
+class Marry {
 
     /**
      *
@@ -26,12 +26,11 @@ class Marry{
      * @param age
      * @param color
      */
-    constructor(name, age, color= '') {
+    constructor(name, age, color = '') {
         this.name = name
         this.age = age
         this._color = color;
     }
-
 
 
     get color() {
@@ -43,7 +42,7 @@ class Marry{
     }
 }
 
-Alive.prototype.changeName = function (){
+Alive.prototype.changeName = function () {
     return `changed ${this.name} `
 };
 
@@ -51,7 +50,22 @@ let humanMale = new Alive('Jhon', 20)
 let humanFemale = new Marry('Marry', 21, 'white')
 let jobs = [3, 2, 5, 2]
 
-jobs = jobs.map( value => value * 2)
+jobs = jobs.map(value => value * 2)
 
+let promice = new Promise((resolve, reject) => {
+    if (jobs.includes(6)) {
+        resolve(22)
+    }
+    reject("errrorrr")
+})
+    .then((message, resolve) => {
+        console.log(message)
+        resolve('got an error')
+    })
+    .then(error => {
+        console.error(error)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
 
-export  {Marry}
