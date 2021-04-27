@@ -1,10 +1,18 @@
 class Alive{
-
+    /**
+     *
+     * @param name
+     * @param age
+     */
     constructor(name, age) {
         this.name = name
         this.age = age
     }
 
+    /**
+     *
+     * @returns {string}
+     */
     action() {
         return `Hi ${this.name}. You are ${this.age}`
     }
@@ -12,10 +20,26 @@ class Alive{
 
 class Marry{
 
+    /**
+     *
+     * @param name
+     * @param age
+     * @param color
+     */
     constructor(name, age, color= '') {
         this.name = name
         this.age = age
-        this.color = color
+        this._color = color;
+    }
+
+
+
+    get color() {
+        return this._color;
+    }
+
+    set color(value) {
+        this._color = value;
     }
 }
 
@@ -25,4 +49,9 @@ Alive.prototype.changeName = function (){
 
 let humanMale = new Alive('Jhon', 20)
 let humanFemale = new Marry('Marry', 21, 'white')
-console.log(humanFemale)
+let jobs = [3, 2, 5, 2]
+
+jobs = jobs.map( value => value * 2)
+
+
+export  {Marry}
